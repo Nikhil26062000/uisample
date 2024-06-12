@@ -14,7 +14,7 @@ const BodyComponent = () => {
     { name: "import Airbnb listing" }, //
   ];
   return (
-    <div className="w-[100%] h-[88.5vh] bg-[#242526] relative">
+    <div className="w-[100%] h-[100vh] bg-[#242526] relative">
       {/* ------------------------- Breadcrumb -----------------------------------------------------*/}
       <div className="absolute right-0 pr-16 py-6 text-[#59595d]">
         <Breadcrumb items={breadcrumbItems} />
