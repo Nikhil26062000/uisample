@@ -1,13 +1,71 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+ @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+html {
+  font-family: 'Inter';
+} 
+
+.progress-container {
+  border: "none";
+  width: 350px;
+  height: 8px; 
+  border-radius: 10px; 
+  /* box-shadow: 4px 4px 12px 0px #000000; Main shadow */
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.progress-bar {
+  display: flex;
+  height: 100%;
+  border-radius: 4px; 
 }
+
+.blue-segment {
+  background: linear-gradient(to right, #0242E4 0%, #0066FF 50%, #9AC2FF 100%);
+  height: 100%;
+  border-radius: 10px; /* Rounded corners for the blue segment */
+  box-shadow: -3px -3px 12px 0px #5B636E; /* Inner shadow for the blue segment */
+}
+
+.black-segment {
+  background-color: black;
+  height: 100%;
+  border-radius: 0 10px 10px 0; /* Rounded corners for the black segment */
+}
+
+
+
+
+
+.breadcrumb {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.breadcrumb-item {
+  margin: 0 5px;
+}
+
+.breadcrumb-item + .breadcrumb-item::before {
+  content: ">";
+  margin: 0 5px;
+  color: #B1B3B8;
+}
+
+.breadcrumb-item a {
+  text-decoration: none;
+  color: #84868a;
+  font-weight: 500;
+ 
+}
+
+.breadcrumb-item.active a {
+  color: #88898E
+  ;
+  pointer-events: none; 
+}
+
